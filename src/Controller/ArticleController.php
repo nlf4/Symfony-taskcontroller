@@ -17,11 +17,12 @@ public function homepage()
     return new Response('WELCOME');
 }
 
+
     /**
-     * @Route("/news/ba-jeebajoop")
+     * @Route("/news/{slug}")
      */
-    public function show()
+    public function show($slug)
     {
-        return new Response('future page');
+        return new Response(sprintf('future page to show: %s', $slug));
     }
 }
